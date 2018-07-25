@@ -55,7 +55,7 @@ exports.seed = function(knex, Promise) {
             {tag_id: tagIds[2], post_id: postIds[3]},
             {tag_id: tagIds[2], post_id: postIds[4]},
             {tag_id: tagIds[2], post_id: postIds[7]},
-            {tag_id: tagIds[2], post_id: postIds[8]},
+            {tag_id: tagIds[2], post_id: postIds[8]}
           ].map(fields => knex('taggings').insert(fields).returning('id'))
 
           return Promise.all(tagsPostPromises)
